@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body><div class="column">
+    <h2 class="title"> <b> Formatted Tables </b> </h2>
+    <h4 class="title is-size-4"> Select Regulations to Include </h4>
+    <!-- Regulation Checkboxes -->
+
+
+    <b class="is-size-5"> Risk Regulatory and Reference Criteria </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="USEPA RSL Residential" id="USEPA RSL Residential">
+        USEPA RSL Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="USEPA RSL Industrial" id="USEPA RSL Industrial">
+        USEPA RSL Industrial
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="ESL - Tier 1" id="ESL - Tier 1">
+        ESL - Tier 1
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="ESL - Residential" id="ESL - Residential">
+        ESL - Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="ESL - Commerical" id="ESL - Commerical">
+        ESL - Commerical
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="DTSLs SLs - Residential" id="DTSLs SLs - Residential">
+        DTSLs SLs - Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="DTSCs SLs - Commerical" id="DTSCs SLs - Commerical">
+        DTSCs SLs - Commerical
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="ESL - Construction Workers" id="ESL - Construction Workers">
+        ESL - Construction Workers
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="California OSHA Permissible Exposure Limits" id="California OSHA Permissible Exposure Limits">
+        California OSHA Permissible Exposure Limits
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Concentration in California Benchmark Soil" id="Concentration in California Benchmark Soil">
+        Concentration in California Benchmark Soil
+    </label>
+    <br><br>
+
+
+
+    <b class="is-size-5"> Hazardous Waste Criteria </b><br>
+    <label class="checkbox">
+        <input type="checkbox" name="all_haz_waste" id="all_haz_waste">
+        TTLC, STLC, STLCx10, TCLP, TCLPx20
+    </label><br><br>
+
+
+
+    <b class="is-size-5"> Recycling Facility Acceptance Criteria </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Baylands Soil Processing" id="Baylands Soil Processing">
+        Baylands Soil Processing
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Lennar Urban - Candlestick Point Redevelopment" id="Lennar Urban - Candlestick Point Redevelopment">
+        Lennar Urban - Candlestick Point Redevelopment
+    </label>
+    <br><br>
+
+
+
+    <b class="is-size-5"> Range of Potential Background Concentration </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Shaklette and Boerngen" id="Shaklette and Boerngen">
+        Shaklette and Boerngen
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="LBNL" id="LBNL">
+        LBNL
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Bradford et al." id="Bradford et al.">
+        Bradford et al.
+    </label>
+    <br><br>
+
+
+
+    <b class="is-size-5"> Wastewater Discharge Criteria </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="SFPUC Batch Discharge Criteria" id="SFPUC Batch Discharge Criteria">
+        SFPUC Batch Discharge Criteria
+    </label>
+    <br><br>
+
+
+
+    <b class="is-size-5"> Risk Regulatory and Reference Criteria (GW) </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="ESL - Tier 1 (GW)" id="ESL - Tier 1 (GW)">
+        ESL - Tier 1 (GW)
+    </label>
+    <br><br>
+
+
+
+    <b class="is-size-5"> Risk Regulatory and Reference Criteria (SV) </b><br>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Subslab / Soil Gas ESL - Tier 1" id="Subslab / Soil Gas ESL - Tier 1">
+        Subslab / Soil Gas ESL - Tier 1
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Subslab / Soil Gas ESL - Residential" id="Subslab / Soil Gas ESL - Residential">
+        Subslab / Soil Gas ESL - Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Subslab / Soil Gas ESL - Commercial" id="Subslab / Soil Gas ESL - Commercial">
+        Subslab / Soil Gas ESL - Commercial
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Indoor Air ESL - Tier 1" id="Indoor Air ESL - Tier 1">
+        Indoor Air ESL - Tier 1
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Indoor Air ESL - Residential" id="Indoor Air ESL - Residential">
+        Indoor Air ESL - Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Indoor Air ESL - Commercial" id="Indoor Air ESL - Commercial">
+        Indoor Air ESL - Commercial
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Air DTSCs SLs - Residential" id="Air DTSCs SLs - Residential">
+        Air DTSCs SLs - Residential
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="Air DTSC SLs - Commercial" id="Air DTSC SLs - Commercial">
+        Air DTSC SLs - Commercial
+    </label>
+    <br><br>
+
+    var $checkboxes = $('#checkboxlength  input[type="checkbox"]');
+    $checkboxes.change(function(){
+    /*if the clicked checkbox has check_all id
+    then check all other checkboxes if this one is checked
+    and vise versa */
+    if($(this).is("#check_all"))
+    $checkboxes.prop('checked',$(this).prop('checked'));
+
+    $('#count-checked-checkboxes').text($checkboxes.filter(':checked').length);
+    });
+    .css{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    }
+    .green{
+    color:red;
+    }
+
+    .blue{
+    color:blue;
+    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <div id="checkboxlength" class="css">
+        <div class="blue"><input type="checkbox" id="check_all"><span>All</span></div>
+        <div><input type="checkbox"><span>rose</span></div>
+        <div><input type="checkbox"><span>blue</span> </div>
+        <div><input type="checkbox"><span>white</span> </div>
+        <div class="green"><span id="count-checked-checkboxes">0</span> checked</div>
+    </div>
+
+
+</body>
+</html>

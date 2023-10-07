@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+    <h1>test</h1>
+
+</div>
+<script type="text/javascript">
+
+    function fun() {
+
+
+        alert("This is an alert dialog box");
+    }
+</script>
+<body>
+    <p> Click the following button to see the effect </p>
+    <form>
+        <input type="button" value="Click me" onclick="fun();" />
+    </form>
+    var $checkboxes = $('#checkboxlength  input[type="checkbox"]');
+    $checkboxes.change(function(){
+    /*if the clicked checkbox has check_all id
+    then check all other checkboxes if this one is checked
+    and vise versa */
+    if($(this).is("#check_all"))
+    $checkboxes.prop('checked',$(this).prop('checked'));
+
+    $('#count-checked-checkboxes').text($checkboxes.filter(':checked').length);
+    });
+    .css{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    }
+    .green{
+    color:red;
+    }
+
+    .blue{
+    color:blue;
+    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <div id="checkboxlength" class="css">
+        <div class="blue"><input type="checkbox" id="check_all"><span>All</span></div>
+        <div><input type="checkbox"><span>rose</span></div>
+        <div><input type="checkbox"><span>blue</span> </div>
+        <div><input type="checkbox"><span>white</span> </div>
+        <div class="green"><span id="count-checked-checkboxes">0</span> checked</div>
+    </div>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    function SetButtons() {
+        alert("setButtons");
+        document.getElementByID("submit").style.visibility = 'visible';
+        document.getElementByID("checkRegulations").style.visibility = 'hidden';
+    }
+
+    function checkBoxCheck(e) {
+//        alert("Entering Check")
+        if ($('input[type=checkbox]:checked').length) {
+            // console.log("at least one checked");
+            return true;
+        } else {
+            // console.error("no checkbox checked");
+            return false;
+        }
+    }
+
+    function checkRegulations() {
+        if (checkBoxCheck(document.getElementById("myForm")) == false) {
+            alert("You must select at least one regulation to include before continuing")
+            return false;
+        } else {
+//            alert('OK');
+//            SetButtons();
+            return true;
+        };
+    }
+
+    var sortable = Sortable.create(sample_order, {
+        // animation: 150,
+    });
+
+    function encode_sample_id(string) {
+        var encoded = string.replace("'", "*SINQUO*").replace('"', "*DUBQUO*").replace(",", "*COMMA*").replace('&', "*AMPR*")
+        return encoded
+    }
+
+    function get_sort_order() {
+        var order = new Array();
+        $('#sample_order li').each(function () {
+            order.push(encode_sample_id($(this).html()));
+
+        });
+        return order
+    }
+    function submit_tables_form() {
+        order = get_sort_order()
+        document.getElementById("sample_order_field").value = order;
+        document.getElementById("start_table_processing").click();
+        document.getElementById("sample_order_modal").classList.remove("is-active");
+    }
+
+</script>
+<div>
+    <h1>Chemical Analytical Module - Result Tables Generation</h1>
+
+</div>
+<body>
+    <form name="myForm" id="myForm" method="post">
+        <br />
+        <label>Enter the file name for Result Table Excel File: </label>
+        <input type="text" id="fname" name="fname" size="40" />
+        <br />
+        <hr />
+        <br />
+        <button type="submit" class="btn btn-primary" id="submit" onclick="return checkRegulations()">Submit after Selecting Regulations Below:</button>
+
+        <br />
+        <hr />
+
+        <div class="column">
+            <h2 class="title"> <b> Formatted Tables </b> </h2>
+            <h4 class="title is-size-4"> Select Regulations to Include </h4>
+            <!-- Regulation Checkboxes -->
+            {% for title, reg_list in regulatory_category_dict.items()%}
+            {%if title=='Hazardous Waste Criteria'%}
+            <b class="is-size-5"> {{title}} </b><br>
+            <label class="checkbox">
+                <input type="checkbox" name="all_haz_waste" id="all_haz_waste">
+                TTLC, STLC, STLCx10, TCLP, TCLPx20
+            </label><br><br>
+            {% else %}
+            <b class="is-size-5"> {{title}} </b><br>
+            {% for regulation in reg_list%}
+            <label class="checkbox">
+                <input type="checkbox" name="{{regulation}}" id="{{regulation}}">
+                {{regulation}}
+            </label>
+            {%endfor %}<br><br>
+            {%endif%}
+            {%endfor %}
+
+
+
+
+        </div>
+    </form>
+
+  
+ 
+</body>
+{% endblock %}

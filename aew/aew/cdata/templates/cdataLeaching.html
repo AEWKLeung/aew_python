@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+    <h1>Chemical Analytical Module - Checking Leaching</h1>
+</div>
+<body>
+    <form method="post" enctype="multipart/form-data" id="main_form">
+        <div class="columns">
+            <!-- Data Input column -->
+            <div class="column is-one-quarter">
+                {% with messages = get_flashed_messages(category_filter=["missing_data"]) %}
+                {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+                {% endif %}
+                {% endwith %}
+                <h2 class="title"> <b> Add Lab Data</b></h2>
+                <div class="field">
+                    <div id="file-uploader" class="file is-boxed">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="lab_data_input" id="lab_data_input" multiple>
+                            <span class="file-cta">
+                                <span class="icon is-small">
+                                    <svg class="icon">
+                                        <use fill="white" href="{{url_for('static', filename='icon-set.svg') + '#upload'}}"></use>
+                                    </svg>
+                                </span>
+                                <span class="file-label">
+                                    Select File(s)
+                                </span>
+                            </span>
+                            <span class="file-name" style="display:none; height:auto; white-space: normal;">
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const fileInput = document.querySelector('#file-uploader input[type=file]');
+            fileInput.onchange = () => {
+                if (fileInput.files.length > 0) {
+                    document.getElementById('file-uploader').classList.add("has-name");
+                    const fileName = document.querySelector('#file-uploader .file-name')
+                    var fileList = ''
+                    for (let i = 0; i < fileInput.files.length; i++) {
+                        const file = fileInput.files[i]
+                        if (fileInput.files.length > 1) {
+                            fileList += file.name + ', '
+                        } else {
+                            fileList += file.name
+                        }
+
+                        fileName.textContent = fileList
+                        fileName.style.display = ""
+
+                    }
+                }
+            }</script>
+        <br />
+        <label>Enter the file name for Leaching Checking Excel File: </label>
+        <input type="text" id="fname" name="fname" size="40" />
+        <br />
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </form>
+</body>
+        {% endblock %}

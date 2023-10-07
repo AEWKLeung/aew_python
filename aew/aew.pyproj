@@ -1,0 +1,202 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0a746fc4-1d5d-4bf8-8902-cadd7df3ee0b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>app.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>aew_full</Name>
+    <RootNamespace>aew_full</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aew\auth.py" />
+    <Compile Include="aew\cdata\cdata.py" />
+    <Compile Include="aew\cdata\cdataExcel.py" />
+    <Compile Include="aew\cdata\cdataPandas.py" />
+    <Compile Include="aew\cdata\cdataRefs.py" />
+    <Compile Include="aew\cdata\cdataToSql.py" />
+    <Compile Include="aew\cdata\dbCData.py" />
+    <Compile Include="aew\cdata\edd_processing.py" />
+    <Compile Include="aew\cdata\haz_waste_check.py" />
+    <Compile Include="aew\cdata\reformat_lab_report.py" />
+    <Compile Include="aew\dbemployee.py" />
+    <Compile Include="aew\views.py" />
+    <Compile Include="aew\__init__.py" />
+    <Compile Include="app.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aew\cdata\static\js\ei_packed.js" />
+    <Content Include="aew\cdata\static\js\sortable_list.js" />
+    <Content Include="aew\cdata\static\resources\footnotes.xlsx" />
+    <Content Include="aew\cdata\static\resources\regulatory_criteria_references.xlsx" />
+    <Content Include="aew\cdata\static\resources\test_edds\1602718_withaddonA.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1905G67.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1905G67_Addon A.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1906597.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1906597_addonA.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1906F15.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1907369.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1908581.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1910472.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1911069.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1911B58.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\1912622.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2004737.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2004737_Addon A.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2005661.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A22.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A22_REV.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A23.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A24.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A24_Addon A.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A24_addonB.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A25.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A25_Addon A.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006A25_addonB.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006D51.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2006D51_Addon A.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2007038.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2007070.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2007071.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2007325.xls" />
+    <Content Include="aew\cdata\static\resources\test_edds\2007577.xls" />
+    <Content Include="aew\cdata\static\resources\WEB REGULATORY CRITERA - footnotes.csv" />
+    <Content Include="aew\cdata\static\resources\WEB REGULATORY CRITERA - regulations.csv" />
+    <Content Include="aew\cdata\templates\cdataGenerate.html" />
+    <Content Include="aew\cdata\templates\cdataImport.html" />
+    <Content Include="aew\cdata\templates\cdataIndex.html" />
+    <Content Include="aew\cdata\templates\cdataLeaching.html" />
+    <Content Include="aew\cdata\templates\cdataRpt.html" />
+    <Content Include="aew\cdata\templates\test.html" />
+    <Content Include="aew\cdata\templates\WebPage1.html" />
+    <Content Include="aew\cdata\temp_files\lab_data_Leung.pkl" />
+    <Content Include="aew\cdata\__pycache__\cdata.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\cdataExcel.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\cdataPandas.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\cdataRefs.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\dbCData.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\haz_waste_check.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\reformat_lab_report.cpython-311.pyc" />
+    <Content Include="aew\cdata\__pycache__\reformat_lab_report.cpython-311.pyc.2453704801168" />
+    <Content Include="aew\cdata\__pycache__\reformat_lab_report.cpython-311.pyc.2885541313424" />
+    <Content Include="aew\static\content\bootstrap.css" />
+    <Content Include="aew\static\content\bootstrap.min.css" />
+    <Content Include="aew\static\content\site.css" />
+    <Content Include="aew\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="aew\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="aew\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="aew\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="aew\static\scripts\bootstrap.js" />
+    <Content Include="aew\static\scripts\bootstrap.min.js" />
+    <None Include="aew\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="aew\static\scripts\jquery-1.10.2.js" />
+    <Content Include="aew\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="aew\static\scripts\jquery-1.10.2.min.map" />
+    <None Include="aew\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="aew\static\scripts\jquery.validate.js" />
+    <Content Include="aew\static\scripts\jquery.validate.min.js" />
+    <Content Include="aew\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="aew\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="aew\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="aew\static\scripts\respond.js" />
+    <Content Include="aew\static\scripts\respond.min.js" />
+    <None Include="aew\static\scripts\_references.js" />
+    <Content Include="aew\templates\about.html" />
+    <Content Include="aew\templates\contact.html" />
+    <Content Include="aew\templates\index.html" />
+    <Content Include="aew\templates\layout.html" />
+    <Content Include="aew\templates\login.html" />
+    <Content Include="aew\templates\register.html" />
+    <Content Include="aew\__pycache__\auth.cpython-311.pyc" />
+    <Content Include="aew\__pycache__\dbemployee.cpython-311.pyc" />
+    <Content Include="aew\__pycache__\views.cpython-311.pyc" />
+    <Content Include="aew\__pycache__\__init__.cpython-311.pyc" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.11</Version>
+      <Description>env (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aew\" />
+    <Folder Include="aew\cdata\" />
+    <Folder Include="aew\cdata\static\" />
+    <Folder Include="aew\cdata\static\js\" />
+    <Folder Include="aew\cdata\static\resources\" />
+    <Folder Include="aew\cdata\static\resources\test_edds\" />
+    <Folder Include="aew\cdata\templates\" />
+    <Folder Include="aew\cdata\temp_files\" />
+    <Folder Include="aew\cdata\__pycache__\" />
+    <Folder Include="aew\static\" />
+    <Folder Include="aew\static\content\" />
+    <Folder Include="aew\static\fonts\" />
+    <Folder Include="aew\static\scripts\" />
+    <Folder Include="aew\templates\" />
+    <Folder Include="aew\__pycache__\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
